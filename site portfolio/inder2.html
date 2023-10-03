@@ -1,0 +1,955 @@
+<html>
+                    <head>
+                    <title>Lua Chan Cosplay Shop </title>
+
+<link rel="shortcut icon" href="http://www.iconj.com/ico/f/s/fsi1bkglw8.ico" />
+<meta content="no" http-equiv="imagetoolbar">
+<meta content="progid:DXImageTransform.Microsoft.GradientWipe(Duration=4)" http-equiv="Page-Exit">
+<meta content="progid:DXImageTransform.Microsoft.GradientWipe(Duration=4)" http-equiv="Page-Enter">
+
+
+<style>
+#popup{ 
+    position:absolute; 
+    width:200px; 
+    padding:5px; 
+    background-color: #f0afd7; 
+    border:1px solid #504e4e; 
+    visibility:hidden; 
+    z-index:100; 
+    cursor:hand; color: #634428 }
+
+.popup{
+    LEFT: 265px; 
+    TOP: 43px; 
+    position:absolute;}
+
+
+A:link{ 
+    text-decoration: none; 
+    font-weight: none; 
+    color:FFAFB4; }
+    
+A:visited{
+    text-decoration: none; 
+    color:FFAFB4;}
+
+A:active{ 
+    text-decoration: none; 
+    cursor: none; 
+    color:FFAFB4;}
+                  
+A:hover { 
+    text-decoration:none; 
+    text-transform:none; 
+    cursor: none; 
+    color:#6C3F36; 
+    background-color:none; 
+    border-bottom:0px dotted black; 
+    border-top:0px dashed white; 
+    border-left:0px solid black;
+    border-right:0px solid black;}
+                                           
+u { 
+    color: #FFAFB4; 
+    text-decoration:underline; }
+                 
+body { 
+    background: white;
+    background-attachment: fixed;  
+    font-family: tahoma; 
+    color: FFAFB4; 
+    font-size: 12px;
+    cursor:url(https://cdn.custom-cursor.com/db/10519/32/minimal-axolotl-pointer.png);            
+    scrollbar-face-color:white;
+    scrollbar-shadow-color:FFAFB4;
+    scrollbar-highlight-color:white;
+    scrollbar-3dlight-color:FFAFB4;
+    scrollbar-darkshadow-color:white;
+    scrollbar-track-color:white;
+    scrollbar-arrow-color:6C3F36; }
+                 
+                 
+td{ 
+    font-family: tahoma;
+    font-size: 12px; 
+    color: 6C3F36; 
+    cursor: crosshair; 
+    text-align: justify;
+     margin: 0px;}
+                      
+textarea, input, select {
+    font-family : tahoma; 
+    font-size: 11px;   
+    border-color: black;   
+    border-style: solid; 
+    border-top-width: 1px; 
+    border-left-width: 1px;
+    border-right-width: 1px; 
+    border-bottom-width: 1px; }
+
+            
+.heading {
+    font-family:"tahoma"; 
+    font-size: 11px; 
+    text-align:left;
+    padding: 10px;
+}
+                  
+
+.heading2 {
+    font-family:"tahoma"; 
+    font-size: 11px; 
+    background-color:transparent;
+    text-align: left;
+    padding: 10px; }
+
+
+ .Layer1{
+    position: absolute; 
+    top: 205px; 
+    left: 1000px; 
+    width:100px; 
+    height: 30px;
+    z-index: 5; 
+    font-size:9pt; 
+    text-align: left; 
+    cursor: crosshair; }
+
+
+.layer2{ 
+    position:center; 
+    padding: 10px;
+    width:400px ; 
+    height:30px ; 
+    z-index:5; 
+    left: 300px ; 
+    top: 85px ; 
+    overflow: infinite; 
+    border:0px solid none; 
+    background-color: transparent;}
+
+.Layer5{
+    position: absolute; 
+    width: 178px; 
+    height: 76px; 
+    z-index: 1; 
+    left: 60px; 
+    top: 455px; }
+
+.bt1{
+    color:pink; 
+    cursor:crosshair; 
+    text-decoration: none;
+    width: 150px;
+    height: 30px;}
+
+
+.welcome{
+    padding:10px; 
+    position:absolute; 
+    width:560; 
+    height: 300; 
+    z-index:2; 
+    left: 300px; 
+    top: 165px; 
+    overflow: auto;  
+    background-color: transparent; 
+    filter: Alpha(Opacity=100);}
+
+.table1{
+  width:71;
+  height:23;
+}
+
+</style>
+
+
+<DIV id=popup>
+
+<DIV align=right aria-setsize="400px">
+    <B>
+        <A href="javascript:closeit()">[Close]</A>
+    </B>
+</DIV>
+
+<!--Conteudo pop up-->
+
+<center>
+    <img src="img1.gif" width="100 px">
+    <br>
+    <br>
+<u>.: Bem Vindo :.</u>
+    <br>
+    <br>
+Desculpe, mas algumas partes ainda estão em construção.
+    <br>
+    <br>
+Volte sempre, para conferir as novidades ^_^ 
+    <br>
+    <br>
+- Lua Chan -
+
+</center>
+
+<!--END conteudo pop up-->
+
+</DIV>
+
+<script>
+
+var once_per_browser = 0
+var ns4=document.layers
+var ie4=document.all
+var ns6=document.getElementById&&!document.all
+
+if (ns4)
+crossobj=document.layers.postit
+else if (ie4||ns6)
+crossobj=ns6? document.getElementById("popup") : document.all.postit
+
+
+function closeit(){
+if (ie4||ns6)
+crossobj.style.visibility="hidden"
+else if (ns4)
+crossobj.visibility="hide"
+}
+
+function get_cookie(Name) {
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) { // if cookie exists
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1)
+         end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+function showornot(){
+if (get_cookie('popupdisplay')==''){
+showit()
+document.cookie="popupdisplay=yes"
+}
+}
+
+function showit(){
+if (ie4||ns6)
+crossobj.style.visibility="visible"
+else if (ns4)
+crossobj.visibility="show"
+}
+
+if (once_per_browser)
+showornot()
+else
+showit()
+
+</SCRIPT>
+
+<script> 
+     var text1="Bloggie"
+     comeback=0
+     cometo=0
+
+     function dis(){
+     window.status=text1.substring(0,cometo)
+        if(comeback==1){
+            cometo--;
+        if(cometo==0){comeback=0}
+        } else { 
+            cometo;
+            if(cometo==text1.length)
+            {comeback=1}}
+
+    window.status=text1.substring(0,cometo)
+        if(cometo==text1.length){window.setTimeout("dis()",700);} 
+        else {window.setTimeout("dis()",90);}
+     
+    }
+
+    dis()
+
+    </script>
+                <script>
+                  var ns6=document.getElementById&&!document.all?1:0
+                  var head="display:''"
+                  var folder=''
+                  function expandit(curobj){
+                  folder=ns6?curobj.nextSibling.nextSibling.style:document.all [curobj.sourceIndex1].style
+                  if (folder.display=="none")
+                  folder.display=""
+                  else
+                  folder.display="none"
+                  }
+                  //-->
+
+                  </script>
+
+<link rel="me" href="https://www.blogger.com/profile/03369924772804830132" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<!-- data-ad-client=ca-pub-9046019552198386 -->
+<!-- -->
+
+
+</head>
+                 
+                 <noembed>
+<body>
+    <script>
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container">
+<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar.g?targetBlogID\x3d2809231279984188318\x26blogName\x3dLua+Chan+Cosplay\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dSILVER\x26layoutType\x3dCLASSIC\x26searchRoot\x3dhttps://luachancosplay.blogspot.com/search\x26blogLocale\x3dpt_BR\x26v\x3d2\x26homepageUrl\x3dhttp://luachancosplay.blogspot.com/\x26vt\x3d5600533536388004346',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script>
+                 </noembed>
+                 
+                
+                <div id="Layer2"> 
+                 <img src="http://s586.photobucket.com/albums/ss309/luachan2/fundo.jpg" width="1005" height="618">
+                
+                </div>
+              
+
+
+                
+                <div style="position: absolute; top: 192px; left: 78px; width:150px; height: 30px; 
+                 z-index: 5">
+                  
+                 
+                
+                 
+                <center>
+                 <table border="0" 
+                 id="table1">
+					<tr>
+						<td>
+						  <p style="text-align: center">
+                           <font size=2 color="000000" face="tahoma">
+                
+                 			<br>
+                		</td>
+					</tr>
+                    <table border="0" width="100%">
+                        <tr>
+                          <td>
+                            <marquee behavior=" scroll" direction= "up" scrollamount="5" onmouseover="scrollAmount=0" onmouseout="this.scrollAmount=5">
+                            <center>
+                            <img src="http://s586.photobucket.com/albums/ss309/luachan2/miza.jpg" width="100" height="100" border="0"><br> <br>
+                            <img src="http://s586.photobucket.com/albums/ss309/luachan2/pucca.jpg" width="100" height="100" border="0"><br> <br>
+                            <img src="http://s586.photobucket.com/albums/ss309/luachan2/naruto.jpg"width="100" height="100" border="0"><br> <br>
+                            <img src="http://s586.photobucket.com/albums/ss309/luachan2/sasuke.jpg"width="100" height="100" border="0"><br> <br>
+                            <img src="http://s586.photobucket.com/albums/ss309/luachan2/mario_star.jpg" width="100" height="100" border="0"><br> <br>
+                            <img src="http://s586.photobucket.com/albums/ss309/luachan2/serena.jpg" width="100" height="100" border="0"><br> <br>
+                          </center></td>
+                        </tr>
+
+                        <td>
+                            <h1>lol</h1>
+                        </td>
+                        </table>  
+
+
+
+
+					</table>
+                 
+                 
+             
+
+		                  
+                 </center>
+                </div>
+                
+
+               <div style="position: absolute; width: 100px; height: 100px; z-index: 1; left:875px; top:42px" id="layer3">
+               <table border="0" width="124" height="102" background="http://s586.photobucket.com/albums/ss309/luachan2/visita.gif">
+				<tr>
+					<td height="30">&nbsp;</td>
+				</tr>
+				<tr>
+					<td>
+				 <font face="tahoma">
+                 <font color=6C3F36>
+                 <font size=2>
+                      <center>
+                       Visitantes:
+                         <script src="http://fastwebcounter.com/secure.php?s=www.luachancosplay.blogger.com">
+                         </script>
+                      </center>
+                    </td>
+				</tr>
+				<tr>
+					<td>
+				 <font face="tahoma">
+                 <font color=6C3F36>
+                 <font size=2>
+                 <center>
+                 Online:
+				  <script src=http://fastonlineusers.com/online.php?d=www.luacosplay.blogger.com></script>
+				  </center>
+				    </td>
+				</tr> 
+				<tr>
+                  
+<!-----------------------------------------------------------menu de links------------------------------------------------------------->
+					<td id="menu-direito" height="30">
+                        
+                            <button id="bt1" onClick="document.getElementById('welcome').innerHTML=document.getElementById('cosplay.').innerHTML" onMouseOver="this.style.fontFamily='tahoma'" onMouseOut="this.style.fontFamily='tahoma'">
+                            Cosplay
+                            </button>
+                            <br><br>
+                         
+                    
+                          
+                            <button id="bt1" 
+                            onClick="document.getElementById('welcome').innerHTML=document.getElementById('doll.').innerHTML" 
+                            onMouseOver="this.style.fontFamily='tahoma'" onMouseOut="this.style.fontFamily='tahoma'">
+                            Doll
+                            </button>
+                            <br><br>                        
+                    
+                          
+                            <button id="bt1"
+                            onClick="document.getElementById('welcome').innerHTML=document.getElementById('fashion.').innerHTML" 
+                            onMouseOver="this.style.fontFamily='tahoma'" 
+                            onMouseOut="this.style.fontFamily='tahoma'">
+                                Fashion
+                                </button>
+                                <br><br>
+                                                           
+                    
+                        
+                            <button id="bt1"
+                                   onClick="document.getElementById('welcome').innerHTML=document.getElementById('quadros.').innerHTML" 
+                                   onMouseOver="this.style.fontFamily='tahoma'" 
+                                   onMouseOut="this.style.fontFamily='tahoma'" >
+                                   Quadros
+                                   </button>
+                                   <br><br>
+                    
+                       
+                            <button id="bt1"
+                                   onClick="document.getElementById('welcome').innerHTML=document.getElementById('outros.').innerHTML"
+                                   onMouseOver="this.style.fontFamily='tahoma'" onMouseOut="this.style.fontFamily='tahoma'">
+                                   Outros
+                                   </button>
+                                   <br><br>
+                    
+                      
+                            <button id="bt1"
+                                   onClick="document.getElementById('welcome').innerHTML=document.getElementById('links.').innerHTML" 
+                                   onMouseOver="this.style.fontFamily='tahoma'" onMouseOut="this.style.fontFamily='tahoma'" >
+                                   Links
+                                   </button>
+                                   <br><br>
+                    
+                         
+                            <button id="bt1"
+                                   onClick="document.getElementById('welcome').innerHTML=document.getElementById('eventos.').innerHTML" 
+                                   onMouseOver="this.style.fontFamily='tahoma'" onMouseOut="this.style.fontFamily='tahoma'">
+                                   Eventos
+                                   </button>
+                           
+                    
+                                   </td>
+                    </div>
+                    
+                    
+
+                    </td>
+				</tr>
+				</table>
+               </div>
+                
+                
+<!--------------------------------------------------------------- blog ----------------------------------------------------->                
+                <div id="welcome" >
+
+
+                   <font color="#FFAFB4">
+                  <div class=heading2><u>&#9829;</font> <b>domingo, 7 de junho de 2009</b> <font color="#FFAFB4">&#9829;</font></u><br>
+                   <br><font color=6C3F36>
+                   <div style="clear:both;"></div>Novas camisetas em breve!<br />Confira os projetos em andamento:<span><br /><p align="center"><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_k_pfU3soD7E/Six_o9o3yhI/AAAAAAAAACQ/hNr9NdsLKtg/s1600-h/camiseta-mokona.jpg"><img style="cursor: pointer; width: 200px; height: 180px;" src="http://1.bp.blogspot.com/_k_pfU3soD7E/Six_o9o3yhI/AAAAAAAAACQ/hNr9NdsLKtg/s320/camiseta-mokona.jpg" alt="" id="BLOGGER_PHOTO_ID_5344787199499422226" border="0" /></a>   <a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_k_pfU3soD7E/Six_opLSrjI/AAAAAAAAACA/_2eiWvSscZA/s1600-h/camiseta_kero.jpg"><img style="cursor: pointer; width: 200px; height: 180px;" src="http://3.bp.blogspot.com/_k_pfU3soD7E/Six_opLSrjI/AAAAAAAAACA/_2eiWvSscZA/s320/camiseta_kero.jpg" alt="" id="BLOGGER_PHOTO_ID_5344787194006646322" border="0" /></a><br /><br /><br /><br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_k_pfU3soD7E/Six_o_cRiNI/AAAAAAAAACY/7_2BO9OoUPU/s1600-h/camiseta-mokona2.jpg"><img style="cursor: pointer; width: 200px; height: 180px;" src="http://3.bp.blogspot.com/_k_pfU3soD7E/Six_o_cRiNI/AAAAAAAAACY/7_2BO9OoUPU/s320/camiseta-mokona2.jpg" alt="" id="BLOGGER_PHOTO_ID_5344787199983454418" border="0" /></a>   <a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_k_pfU3soD7E/Six_osUUHVI/AAAAAAAAACI/3KcnumarL0s/s1600-h/camiseta_kyo.jpg"><img style="cursor: pointer; width: 200px; height: 180px;" src="http://1.bp.blogspot.com/_k_pfU3soD7E/Six_osUUHVI/AAAAAAAAACI/3KcnumarL0s/s320/camiseta_kyo.jpg" alt="" id="BLOGGER_PHOTO_ID_5344787194849795410" border="0" /></a><br /></p><br /></span><div style="clear:both; padding-bottom:0.25em"></div><br><div align=left>
+                   <div align=right></font> <br><font color=FFAFB4>
+                <img src="http://s586.photobucket.com/albums/ss309/luachan2//hellokitty.gif"><br>
+                <font color=6C3F36><u>&#9829; <font color="#FFAFB4">Lua Chan</font> </u><b>&#9829;</b></font>
+                <i>19:35</i></font>
+					<p><br>
+                    </div>
+                </div></div><br>
+                          
+                   <font color="#FFAFB4">
+                  <div class=heading2><u>&#9829;</font> <b>sexta-feira, 15 de maio de 2009</b> <font color="#FFAFB4">&#9829;</font></u><br>
+                   <br><font color=6C3F36>
+                   <div style="clear:both;"></div>Veja algumas imagens dos produtos que estarão a venda no  estande no próximo anime point.<br /><br /><br /><div style="text-align: center;"><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_k_pfU3soD7E/Six4RXqPtBI/AAAAAAAAABw/z_je_ptZJnU/s1600-h/katana.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 158px; height: 119px;" src="http://3.bp.blogspot.com/_k_pfU3soD7E/Six4RXqPtBI/AAAAAAAAABw/z_je_ptZJnU/s320/katana.jpg" alt="" id="BLOGGER_PHOTO_ID_5344779097586250770" border="0" /></a><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_k_pfU3soD7E/Six4h7EbTvI/AAAAAAAAAB4/ZzWeNZxD5Zk/s1600-h/tohru.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 165px; height: 165px;" src="http://1.bp.blogspot.com/_k_pfU3soD7E/Six4h7EbTvI/AAAAAAAAAB4/ZzWeNZxD5Zk/s320/tohru.jpg" alt="" id="BLOGGER_PHOTO_ID_5344779381969211122" border="0" /></a><br /></div><img src="http://www.blogger.com/%20com=" _k_pfu3sod7e="" six31i0andi="" aaaaaaaaabo="" tbaatufvrbq="" s320="" jpg="" alt="" id="BLOGGER_PHOTO_ID_5344778619545335250" border="0" /><div style="clear:both; padding-bottom:0.25em"></div><br><div align=left>
+                   <div align=right></font> <br><font color=FFAFB4>
+                <img src="http://s586.photobucket.com/albums/ss309/luachan2//hellokitty.gif"><br>
+                <font color=6C3F36><u>&#9829; <font color="#FFAFB4">Lua Chan</font> </u><b>&#9829;</b></font>
+                <i>04:45</i></font>
+					<p><br>
+                    </div></div></div><br>
+                          
+                   <font color="#FFAFB4">
+                  <div class=heading2><u>&#9829;</font> <b>quinta-feira, 30 de abril de 2009</b> <font color="#FFAFB4">&#9829;</font></u><br>
+                   <br><font color=6C3F36>
+                   <div style="clear:both;"></div>BemVindo!<br />O Site finalmente está no ar!<br />Embora ainda exista algumas partes em construção ja da pra ter uma ideia de como  vai ficar.<br />Fiz esse blog especialmente a pedidos, dos otakus do Anime Point, que visitam meu estande e sempre perguntam se não tenho um site para mostrar meu trabalho.<br />Custou mas finalmente atendi a todos os pedidos!<br />Aqui vc vai conhecer as novidade que levarei para os proximos eventos.<div style="clear:both; padding-bottom:0.25em"></div><br><div align=left>
+                   <div align=right></font> <br><font color=FFAFB4>
+                <img src="http://s586.photobucket.com/albums/ss309/luachan2//hellokitty.gif"><br>
+                <font color=6C3F36><u>&#9829; <font color="#FFAFB4">Lua Chan</font> </u><b>&#9829;</b></font>
+                <i>03:18</i></font>
+					<p><br>
+                    </div></div></div><br>
+                          
+</font>
+                   </div>
+                 </div>
+                                  
+<!--------------------------------------------------------------- Blog End ----------------------------------------------------->
+
+
+<!-------------------------------------------------------- Cosplay ------------------------------------------------------------->
+                 <div id="cosplay." style="display:none">
+                    <font color="#FFAFB4">
+                <div class=heading>
+                    <center><u>&#9829; <b>Cosplay</b> &#9829;</u></center><br>
+                <font color="#6C3F36"> Em Construção, estamos trabalhando nisso ^^"
+                 
+                 </div>
+                 </div>
+                   
+<!-------------------------------------------------------------- cosplay End ----------------------------------------------------> 
+
+                 
+<!-------------------------------------------------------------- doll  ------------------------------------------------------->   
+                 <div id="doll." style="display:none">
+                    <font color="#FFAFB4">
+                <div class=heading>
+                    <center><u>&#9829; <b>doll</b> &#9829;</u></center><br>
+                    
+                    
+                  <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/mizza.jpg" width="200"></td>
+							<td>Boneca Miza da coleção Death note, feita a mão em veludine com detalhes em feltro.</td>
+						</tr>
+					</table>
+					
+					
+					 <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/azuna.jpg" width="200" ></td>
+							<td>Boneca Azuna da coleção Mahou sensei negima, feita a mão em veludine com detalhes em feltro e algodão.</td>
+						</tr>
+					</table>
+
+
+                  <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/serena-1.jpg" width="200"></td>
+							<td>Boneca Usagi da coleção Sailor Moon, feita a mão em veludine com detalhes em feltro.</td>
+						</tr>
+					</table>
+					
+					
+					<table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/tsunade.jpg" width="200"></td>
+							<td>Boneca Tsunade da coleção Naruto, feita a mão em veludine com detalhes em feltro.</td>
+						</tr>
+					</table>
+
+
+
+                 
+                 
+                 </div>
+                 </div>
+<!------------------------------------------------------------ doll end -------------------------------------------------------->
+
+                 
+<!------------------------------------------------------------- Fashion ---------------------------------------------------------> 
+                 <div id="fashion." style="display:none">
+                    <font color="#FFAFB4">
+                <div class=heading>
+                    <center><u>&#9829; <b>Fashion </b> &#9829;</u></center><br>
+                &nbsp;<font color="#6C3F36">
+                
+                <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/lao2.jpg" width="200" height="200"></td>
+							<td>Par de Lacinhos de bolinha com prendedor 
+							metálico para o cabelo.</td>
+						</tr>
+					</table>
+					
+					
+					 <table border="0" width="90%" id="table2">
+											<tr>
+							<td width="202">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/lao1.jpg" width="200" height="200"></td>
+							<td>Par de Lacinhos plásticos de bolinha com tic-tac 
+						 para o cabelo.</td>
+						</tr>
+					</table>
+					
+					<table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/allstar.jpg" width="200" height="200"></td>
+							<td>Corrente com pingente all-star </td>
+						</tr>
+					</table>
+
+                 
+                 </div>
+                 </div>
+              
+<!------------------------------------------------------------ Fashion end ------------------------------------------------------> 
+
+<!------------------------------------------------------------ Quadros ----------------------------------------------------------->      
+                  
+                <div id="quadros." style="display:none">
+                    <font color="#FFAFB4">
+                <div class=heading>
+                    <center><u>&#9829; <b>quadros </b> &#9829;</u></center><br>
+                <font color="#6C3F36"> Em Construção, estamos trabalhando nisso ^^"
+                </div>
+                </div>
+                 
+
+                </script>
+
+ <!------------------------------------------------quados end---------------------------------------------------------------------->                 
+
+<!----------------------------------------------------------- outros ------------------------------------------------------------> 
+                  
+                 <div id="outros." style="display:none">
+                    <font color="#FFAFB4">
+                <div class=heading>
+                    <center><u>&#9829; <b>Outros</b> &#9829;</u></center><br>
+               
+               <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/tohru.jpg" width="200" height="200"></td>
+							<td>Chaveiro em feltro da coleção Fruits Basket - Tohru </td>
+						</tr>
+					</table>
+
+
+                 <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/yuki.jpg" width="200" height="200"></td>
+							<td>Chaveiro em feltro da coleção Fruits Basket - Yuki </td>
+						</tr>
+					</table>
+					
+					                 <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/star.jpg" width="200" height="200"></td>
+							<td>Chaveiro em feltro da coleção Super Mário - Super Star </td>
+						</tr>
+					</table>
+					
+					
+					                 <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/big_boo.jpg" width="200" height="200"></td>
+							<td>Chaveiro em feltro da coleção Super Mário - Big Boo </td>
+						</tr>
+					</table>
+					
+					                 <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/pichu.jpg" width="200" height="200"></td>
+							<td>Chaveiro em feltro da coleção Pokemon - Pichu </td>
+						</tr>
+					</table>
+					
+					                 <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/pucca-1.jpg" width="200" height="200"></td>
+							<td>Chaveiro em feltro da coleção Pucca - Pucca </td>
+						</tr>
+					</table>
+					
+					
+                                <table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/hello_cristal.jpg" width="200" height="200"></td>
+							<td>Chaveiro de cristal da coleção Sanrio - Hello kitty </td>
+											</tr>
+					</table>
+					
+					
+										<table border="0" width="90%" id="table2">
+						<tr>
+							<td width="201">
+							<img border="0" src="http://s586.photobucket.com/albums/ss309/luachan2/katana.jpg" width="200"></td>
+							<td>Katanas decorativas em miniatura com suporte pástico e lamina cromada sem fio.</td>
+						</tr>
+					</table>
+					
+					
+                 </div>
+                 </div>
+                 
+<!---------------------------------------------------------------- outros end ----------------------------------------------->
+
+<!---------------------------------------------------------------- Links ---------------------------------------------------->                
+                  
+                 <div id="links." style="display:none">
+                    <font color="#FFAFB4">
+                <div class=heading>
+                    <center><u>&#9829; <b>Links </b> &#9829;</u></center><br>
+                <font color="#6C3F36"> Em Construção, estamos trabalhando nisso ^^"
+                </div>
+                 </div>
+                 
+<!----------------------------------------------------------------- Links end ------------------------------------------------->                 
+                
+<!----------------------------------------------------------------- Eventos --------------------------------------------------->
+
+                  
+                 <div id="eventos." style="display:none">
+                    <font color="#FFAFB4">
+                <div class=heading>
+                    <center><u>&#9829; <b>Eventos </b> &#9829;</u></center><br>
+                <font color="#6C3F36"> Em Construção, estamos trabalhando nisso ^^"
+                </div>
+                 </div>
+                 
+<!----------------------------------------------------------------- eventos end ------------------------------------------------->                 
+                 
+                 
+                <div id="memories." style="display:none">
+                <font color="#FFAFB4">
+                <div class=heading>
+                <center><u>&#9829; <b>Memories</b> &#9829; </u></center><br>
+                
+                 <font color="#6C3F36">&#9829; </font> 
+				<a class="menu" href="../Nova%20pasta%20(41)/%3C$BlogArchiveURL$%3E">abril 2009</a><br>
+                 
+                 <font color="#6C3F36">&#9829; </font> 
+				<a class="menu" href="../Nova%20pasta%20(41)/%3C$BlogArchiveURL$%3E">maio 2009</a><br>
+                 
+                 <font color="#6C3F36">&#9829; </font> 
+				<a class="menu" href="../Nova%20pasta%20(41)/%3C$BlogArchiveURL$%3E">junho 2009</a><br>
+                 </p>
+                <br>
+                <div style="cursor:crosshair;" onClick="expandit(this)">Click</div>
+
+                <span style="display:none"><br>
+                    <div id="links">
+                <a href="http://www.eggiinespiiggy.blogspot.com/">Links</a><br>
+                <a href="http://www.eggiinespiiggy.blogspot.com/">Links</a><br>
+                <a href="http://www.eggiinespiiggy.blogspot.com/">Links</a><br>
+                <a href="http://www.eggiinespiiggy.blogspot.com/">Links</a><br>
+                <a href="http://www.eggiinespiiggy.blogspot.com/">Links</a><br>
+                <a href="http://www.eggiinespiiggy.blogspot.com/">Links</a><br>
+                <a href="http://www.eggiinespiiggy.blogspot.com/">Links</a><br>
+                <a href="http://www.eggiinespiiggy.blogspot.com/">Links</a><br>
+                
+                </span>  
+                 </body></HTML>
+                 
+                 
+                 <style>body, a:hover{cursor: url(http://www.boomspeed.com/dorischu/cursor/0137.ani);}</style>
+
+   <script type="text/javascript">
+          // <![CDATA[
+          var colour="#787373";
+          var sparkles=50;
+   
+          var x=ox=400;
+          var y=oy=300;
+          var swide=800;
+          var shigh=600;
+          var sleft=sdown=0;
+          var tiny=new Array();
+          var star=new Array();
+          var starv=new Array();
+          var starx=new Array();
+          var stary=new Array();
+          var tinyx=new Array();
+          var tinyy=new Array();
+          var tinyv=new Array();
+          window.onload=function() { if (document.getElementById) {
+            var i, rats, rlef, rdow;
+            for (var i=0; i<sparkles; i++) {
+              var rats=createDiv(3, 3);
+              rats.style.visibility="hidden";
+              document.body.appendChild(tiny[i]=rats);
+              starv[i]=0;
+              tinyv[i]=0;
+              var rats=createDiv(5, 5);
+              rats.style.backgroundColor="transparent";
+              rats.style.visibility="hidden";
+              var rlef=createDiv(1, 5);
+              var rdow=createDiv(5, 1);
+              rats.appendChild(rlef);
+              rats.appendChild(rdow);
+              rlef.style.top="2px";
+              rlef.style.left="0px";
+              rdow.style.top="0px";
+              rdow.style.left="2px";
+              document.body.appendChild(star[i]=rats);
+            }
+            set_width();
+            sparkle();
+          }}
+          function sparkle() {
+            var c;
+            if (x!=ox || y!=oy) {
+              ox=x;
+              oy=y;
+              for (c=0; c<sparkles; c++) if (!starv[c]) {
+                star[c].style.left=(starx[c]=x)+"px";
+                star[c].style.top=(stary[c]=y)+"px";
+                star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+                star[c].style.visibility="visible";
+                starv[c]=50;
+                break;
+              }
+            }
+            for (c=0; c<sparkles; c++) {
+              if (starv[c]) update_star(c);
+              if (tinyv[c]) update_tiny(c);
+            }
+            setTimeout("sparkle()", 40);
+          }
+          function update_star(i) {
+            if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+            if (starv[i]) {
+              stary[i]+=1+Math.random()*3;
+              if (stary[i]<shigh+sdown) {
+                star[i].style.top=stary[i]+"px";
+                starx[i]+=(i%5-2)/5;
+                star[i].style.left=starx[i]+"px";
+              }
+              else {
+                star[i].style.visibility="hidden";
+                starv[i]=0;
+                return;
+              }
+            }
+            else {
+              tinyv[i]=50;
+              tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+              tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+              tiny[i].style.width="2px";
+              tiny[i].style.height="2px";
+              star[i].style.visibility="hidden";
+              tiny[i].style.visibility="visible"
+            }
+          }
+          function update_tiny(i) {
+            if (--tinyv[i]==25) {
+              tiny[i].style.width="1px";
+              tiny[i].style.height="1px";
+            }
+            if (tinyv[i]) {
+              tinyy[i]+=1+Math.random()*3;
+              if (tinyy[i]<shigh+sdown) {
+                tiny[i].style.top=tinyy[i]+"px";
+                tinyx[i]+=(i%5-2)/5;
+                tiny[i].style.left=tinyx[i]+"px";
+              }
+              else {
+                tiny[i].style.visibility="hidden";
+                tinyv[i]=0;
+                return;
+              }
+            }
+            else tiny[i].style.visibility="hidden";
+          }
+          document.onmousemove=mouse;
+          function mouse(e) {
+            set_scroll();
+            y=(e)?e.pageY:event.y+sdown;
+            x=(e)?e.pageX:event.x+sleft;
+          }
+
+          function set_scroll() {
+            if (typeof(self.pageYOffset)=="number") {
+              sdown=self.pageYOffset;
+              sleft=self.pageXOffset;
+            }
+            else if (document.body.scrollTop || document.body.scrollLeft) {
+              sdown=document.body.scrollTop;
+              sleft=document.body.scrollLeft;
+            }
+            else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+              sleft=document.documentElement.scrollLeft;
+           sdown=document.documentElement.scrollTop;
+            }
+            else {
+              sdown=0;
+              sleft=0;
+            }
+          }
+          window.onresize=set_width;
+          function set_width() {
+            if (typeof(self.innerWidth)=="number") {
+              swide=self.innerWidth;
+              shigh=self.innerHeight;
+            }
+            else if (document.documentElement && document.documentElement.clientWidth) {
+              swide=document.documentElement.clientWidth;
+              shigh=document.documentElement.clientHeight;
+            }
+            else if (document.body.clientWidth) {
+              swide=document.body.clientWidth;
+              shigh=document.body.clientHeight;
+            }
+          }
+          function createDiv(height, width) {
+            var div=document.createElement("div");
+            div.style.position="absolute";
+            div.style.height=height+"px";
+            div.style.width=width+"px";
+            div.style.overflow="hidden";
+            div.style.backgroundColor=colour;
+            return (div);
+          }
+          // ]]>
+          </script>
